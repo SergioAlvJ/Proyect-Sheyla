@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario Escolar de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Day.js desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Horario Escolar de Tareas</h1>
+        <div class="calendar-controls">
+            <button id="prev-week">← Semana Anterior</button>
+            <span id="current-week"></span>
+            <button id="next-week">Siguiente Semana →</button>
+        </div>
+        <div class="schedule">
+            <div class="time-column">
+                <div class="time-header">Hora</div>
+                <!-- Horas del día -->
+                <div class="time-slot">08:00</div>
+                <div class="time-slot">09:00</div>
+                <div class="time-slot">10:00</div>
+                <div class="time-slot">11:00</div>
+                <div class="time-slot">12:00</div>
+                <div class="time-slot">13:00</div>
+                <div class="time-slot">14:00</div>
+                <div class="time-slot">15:00</div>
+                <div class="time-slot">16:00</div>
+                <div class="time-slot">17:00</div>
+                <div class="time-slot">18:00</div>
+            </div>
+            <div class="days-container">
+                <!-- Días de la semana se generan dinámicamente -->
+            </div>
+        </div>
+        <div class="task-form">
+            <input type="text" id="task-input" placeholder="Nombre de la tarea...">
+            <textarea id="task-description" placeholder="Descripción de la tarea..."></textarea>
+            <select id="task-day">
+                <option value="0">Lunes</option>
+                <option value="1">Martes</option>
+                <option value="2">Miércoles</option>
+                <option value="3">Jueves</option>
+                <option value="4">Viernes</option>
+                <option value="5">Sábado</option>
+                <option value="6">Domingo</option>
+            </select>
+            <select id="task-time">
+                <!-- Horas se generan dinámicamente -->
+            </select>
+            <button id="add-task">Añadir Tarea</button>
+        </div>
+    </div>
+
+    <!-- Modal para mostrar la descripción -->
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-task-title"></h2>
+            <p id="modal-task-description"></p>
+            <p id="modal-task-time"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
