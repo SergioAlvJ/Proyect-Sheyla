@@ -2,7 +2,6 @@ import heapq
 import pygame
 import sys
 import random
-import math
 
 # Configuracion de Pygame
 pygame.init()
